@@ -102,7 +102,7 @@ jobs:
           PACKAGE_EXTRA_OPTS: ${{inputs.PACKAGE_EXTRA_OPTS}}                       # Extra 'scancentral package' options, like '-oss'' if
                                                            # Debricked SCA scan is enabled on Fortify on Demand
           # EXTRA_FOD_LOGIN_OPTS: --socket-timeout=60s     # Extra 'fcli fod session login' options
-          FOD_RELEASE: 22077                  # FoD release name, default: <org>/<repo>:<branch>; may
+          FOD_RELEASE: "GSA/ise-appsec:nodejs_test"                  # FoD release name, default: <org>/<repo>:<branch>; may
                                                            # replace app+release name with numeric release ID
           # DO_WAIT: true                                  # Wait for scan completion, implied if 'DO_EXPORT: true'
           DO_EXPORT: true                                # Export SAST results to GitHub code scanning dashboard
