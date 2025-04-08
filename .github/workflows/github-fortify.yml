@@ -28,7 +28,8 @@ on:
 
 jobs:
   Fortify-AST-Scan:
-    uses: GSA/ise-appsec/.github/workflows/github-fortify-src.yml@setup-copy-from-release
+    #uses: GSA/ise-appsec/.github/workflows/github-fortify-src.yml@setup-copy-from-release
+    uses: Ty_Gear2-NodeJs/.github/workflows/github-fortify-src.yml@master
     with:
       PACKAGE_EXTRA_OPTS: ''
       # To copy existing release attributes, scan settings, and issue details when creating a new release, uncomment the COPY_FROM_RELEASE input.
