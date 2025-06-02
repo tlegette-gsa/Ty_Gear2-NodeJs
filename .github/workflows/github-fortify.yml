@@ -28,8 +28,11 @@ on:
 
 jobs:
   Fortify-AST-Scan:
-    #uses: GSA/ise-appsec/.github/workflows/github-fortify-src.yml@setup-copy-from-release
-    uses: Ty_Gear2-NodeJs/.github/workflows/github-fortify-src.yml@master
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    uses: GSA/ise-appsec/.github/workflows/github-fortify-src2.yml@main
     with:
       PACKAGE_EXTRA_OPTS: ''
       # To copy existing release attributes, scan settings, and issue details when creating a new release, uncomment the COPY_FROM_RELEASE input.
@@ -40,5 +43,6 @@ jobs:
     secrets:
       FOD_CLIENT_ID: ${{ secrets.FOD_CLIENT_ID }}
       FOD_CLIENT_SECRET: ${{ secrets.FOD_CLIENT_SECRET }}
+      FOD_APPNAME: ${{ secrets.FOD_APPNAME }}
       http_proxy: ${{ secrets.HTTP_PROXY }}
       https_proxy: ${{ secrets.HTTPS_PROXY }}
